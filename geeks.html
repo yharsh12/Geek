@@ -6,310 +6,326 @@
     <title>Geeks Library</title>
     <style>
         body {
-          font-family: 'Arial', sans-serif;
-          background-color: #f4f4f9;
-          color: #333;
-          margin: 0;
-          padding: 0;
-        }
-        .container {
-          max-width: 800px;
-          margin: 0 auto;
-          background-color: #1c1c1c;
-          color: #fff;
-          padding: 20px;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-          text-align: center;
-          color: #FFD700;
-          font-size: 2.5em;
-          margin-bottom: 10px;
-        }
-        h3 {
-          color: #FFD700;
-          text-align: center;
-          margin-bottom: 20px;
-        }
-        .front-page-container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          height: 100vh;
-          background-color: #2c3e50; 
-          color: white;
-        }
-        .front-page-container h2 {
-          font-size: 2em;
-          margin-bottom: 20px;
-        }
-        .front-page-container button {
-          padding: 15px 30px;
-          font-size: 1.2em;
-          background-color: #FFD700;
-          border: none;
-          color: #1c1c1c;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-        }
-        .front-page-container button:hover {
-          background-color: #f1c40f;
-        }
-        .add-book-container,
-        .issue-book-container {
-          background-color: #333;
-          border-radius: 10px;
-          padding: 30px;
-          margin-bottom: 40px;
-          position: relative;
-        }
-        .add-book-container:before,
-        .issue-book-container:before {
-          content: "";
-          position: absolute;
-          top: -10px;
-          left: 0;
-          width: 100%;
-          height: 5px;
-          background-color: #FFD700;
-          border-radius: 10px;
-        }
-        form label {
-          display: block;
-          margin: 8px 0;
-          color: #fff;
-          font-size: 1.1em;
-        }
-        form input,
-        form select,
-        form button {
-          width: 100%;
-          padding: 12px;
-          margin: 5px 0 15px 0;
-          border: 1px solid #444;
-          border-radius: 5px;
-          background-color: #555;
-          color: #fff;
-        }
-        form button {
-          background-color: #FFD700;
-          color: #1c1c1c;
-          font-size: 1.1em;
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
-        form button:hover {
-          background-color: #f1c40f;
-          transform: scale(1.05);
-        }
-        table {
-          width: 100%;
-          border-collapse: collapse;
-          margin-top: 20px;
-          table-layout: fixed;
-        }
-        table th,
-        table td {
-          padding: 12px;
-          text-align: left;
-          border-bottom: 1px solid #444;
-          word-wrap: break-word;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        table th {
-          background-color: #333;
-          color: #FFD700;
-        }
-        table td {
-          background-color: #1c1c1c;
-        }
-        .available-books-count {
-          text-align: center;
-          color: #FFD700;
-          font-size: 1.3em;
-          font-weight: bold;
-          margin-bottom: 20px;
-        }
-        .action-buttons button:hover,
-        form button:hover {
-          opacity: 0.9;
-        }
-        @media (max-width: 768px) {
-          .container {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            }
+            .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #1c1c1c;
+            color: #fff;
             padding: 20px;
-          }
-          h1 {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+            text-align: center;
+            color: #FFD700;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            }
+            h3 {
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 20px;
+            }
+            .front-page-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #2c3e50; 
+            color: white;
+            }
+            .front-page-container h2 {
             font-size: 2em;
-          }
-        }
-      </style>
+            margin-bottom: 20px;
+            }
+            .front-page-container button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #FFD700;
+            border: none;
+            color: #1c1c1c;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            }
+            .front-page-container button:hover {
+            background-color: #f1c40f;
+            }
+            .add-book-container,
+            .issue-book-container {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+            position: relative;
+            }
+            .add-book-container:before,
+            .issue-book-container:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #FFD700;
+            border-radius: 10px;
+            }
+            form label {
+            display: block;
+            margin: 8px 0;
+            color: #fff;
+            font-size: 1.1em;
+            }
+            form input,
+            form select,
+            form button {
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #555;
+            color: #fff;
+            }
+            form button {
+            background-color: #FFD700;
+            color: #1c1c1c;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            }
+            form button:hover {
+            background-color: #f1c40f;
+            transform: scale(1.05);
+            }
+            table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            table-layout: fixed;
+            }
+            table th,
+            table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #444;
+            word-wrap: break-word;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            }
+            table th {
+            background-color: #333;
+            color: #FFD700;
+            }
+            table td {
+            background-color: #1c1c1c;
+            }
+            .available-books-count {
+            text-align: center;
+            color: #FFD700;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            }
+            .action-buttons button:hover,
+            form button:hover {
+            opacity: 0.9;
+            }
+            @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            }
+        </style>
     </head>
     <body>
-      <div class="front-page-container" id="frontPage">
-        <h1>Geeks Library</h1>
-        <h2>Library Management System</h2>
-        <button onclick="startLibrary()">Get Started</button>
-      </div>
-      <div class="container" id="libraryPage" style="display:none;">
-        <h1>Geeks Library</h1>
-        <div class="add-book-container">
-          <h3>Add New Book</h3>
-          <form id="bookForm">
-            <label for="bookName">Book Name:</label>
-            <input type="text" id="bookName" required>
-            <label for="bookAuthor">Author:</label>
-            <input type="text" id="bookAuthor" required>
-            <label for="bookId">Book ID:</label>
-            <input type="text" id="bookId" required>
-            <label for="status">Status:</label>
-            <select id="status" required>
-              <option value="Available">Available</option>
-              <option value="Not Available">Not Available</option>
-            </select>
-            <button type="submit">Add Book</button>
-          </form>
-          <div id="availableBooksCount" class="available-books-count"></div>
+        <div class="front-page-container" id="frontPage">
+            <h1>Geeks Library</h1>
+            <h2>Library Management System</h2>
+            <button onclick="startLibrary()">Get Started</button>
         </div>
-        <div class="issue-book-container">
-          <h3>Issue Book</h3>
-          <form id="issueForm">
-            <label for="issueBookId">Book ID:</label>
-            <input type="text" id="issueBookId" required>
-            <label for="issueIssuerCardId">Issuer Card ID:</label>
-            <input type="text" id="issueIssuerCardId" required>
-            <label for="issueDate">Issue Date:</label>
-            <input type="date" id="issueDate" required>
-            <label for="dueDate">Due Date:</label>
-            <input type="date" id="dueDate" required>
-            <button type="submit">Issue Book</button>
-          </form>
+        <div class="container" id="libraryPage" style="display:none;">
+            <h1>Geeks Library</h1>
+            <div class="add-book-container">
+                <h3>Add New Book</h3>
+                <form id="bookForm">
+                    <label for="bookName">Book Name:</label>
+                    <input type="text" id="bookName" required>
+                    <label for="bookAuthor">Author:</label>
+                    <input type="text" id="bookAuthor" required>
+                    <label for="bookId">Book ID:</label>
+                    <input type="text" id="bookId" required>
+                    <label for="status">Status:</label>
+                    <select id="status" required>
+                        <option value="Available">Available</option>
+                        <option value="Not Available">Not Available</option>
+                    </select>
+                    <button type="submit">Add Book</button>
+                </form>
+                <div id="availableBooksCount" class="available-books-count"></div>
+            </div>
+            <div class="issue-book-container">
+                <h3>Issue Book</h3>
+                <form id="issueForm">
+                    <label for="issueBookId">Book ID:</label>
+                    <input type="text" id="issueBookId" required>
+                    <label for="issueIssuerCardId">Issuer Card ID:</label>
+                    <input type="text" id="issueIssuerCardId" required>
+                    <label for="issueDate">Issue Date:</label>
+                    <input type="date" id="issueDate" required>
+                    <label for="dueDate">Due Date:</label>
+                    <input type="date" id="dueDate" required>
+                    <button type="submit">Issue Book</button>
+                </form>
+            </div>
+            <div class="issued-books-container">
+                <h3>Books in Library</h3>
+                <table id="bookList">
+                    <thead>
+                        <tr>
+                            <th>Book Name</th>
+                            <th>Author</th>
+                            <th>Book ID</th>
+                            <th>Status</th>
+                            <th>Issue Date</th>
+                            <th>Due Date</th>
+                            <th>Fine</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </div>
-        <div class="issued-books-container">
-          <h3>Books in Library</h3>
-          <table id="bookList">
-            <thead>
-              <tr>
-                <th>Book Name</th>
-                <th>Author</th>
-                <th>Book ID</th>
-                <th>Status</th>
-                <th>Issue Date</th>
-                <th>Due Date</th>
-                <th>Fine</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </div>
-      <script>
-        function startLibrary() {
-          document.getElementById('frontPage').style.display = 'none';
-          document.getElementById('libraryPage').style.display = 'block';
-        }
-        function getBooks() {
-          const books = localStorage.getItem('books');
-          return books ? JSON.parse(books) : [];
-        }
-        function saveBooks(books) {
-          localStorage.setItem('books', JSON.stringify(books));
-        }
-        function calculateFine(issueDate, dueDate) {
-          if (!dueDate || !issueDate) return 0;
-          const today = new Date();
-          const due = new Date(dueDate);
-          const issue = new Date(issueDate);
-          const diffTime = today - due;
-          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-          return diffDays > 0 ? diffDays : 0;
-        }
-        function updateAvailableBooksCount() {
-          const books = getBooks();
-          const availableBooks = books.filter(book => book.status === 'Available').length;
-          const availableBooksCount = document.getElementById('availableBooksCount');
-          availableBooksCount.textContent = `Books Available: ${availableBooks}`;
-        }
-        function displayBooks() {
-          const books = getBooks();
-          const bookList = document.querySelector('#bookList tbody');
-          bookList.innerHTML = '';
-          books.forEach((book, index) => {
-            const fine = calculateFine(book.issueDate, book.dueDate);
-            const fineDisplay = fine > 0 ? `$${fine}` : 'No Fine';
-            const row = document.createElement('tr');
-            row.innerHTML = `
-              <td>${book.bookName}</td>
-              <td>${book.author}</td>
-              <td>${book.bookId}</td>
-              <td>${book.status}</td>
-              <td>${book.issueDate || 'N/A'}</td>
-              <td>${book.dueDate || 'N/A'}</td>
-              <td class="fine">${fineDisplay}</td>
-              <td class="action-buttons">
-                <button onclick="editBook(${index})">Edit</button>
-                <button onclick="deleteBook(${index})">Delete</button>
-              </td>
-            `;
-            bookList.appendChild(row);
-          });
-        }
-        function addBook(event) {
-          event.preventDefault();
-          const bookName = document.getElementById('bookName').value;
-          const author = document.getElementById('bookAuthor').value;
-          const bookId = document.getElementById('bookId').value;
-          const status = document.getElementById('status').value;
-          const books = getBooks();
-          books.push({ bookName, author, bookId, status });
-          saveBooks(books);
-          displayBooks();
-          updateAvailableBooksCount();
-          document.getElementById('bookForm').reset();
-        }
-        function issueBook(event) {
-          event.preventDefault();
-          const bookId = document.getElementById('issueBookId').value;
-          const issuerCardId = document.getElementById('issueIssuerCardId').value;
-          const issueDate = document.getElementById('issueDate').value;
-          const dueDate = document.getElementById('dueDate').value;
-          const books = getBooks();
-          const bookIndex = books.findIndex(book => book.bookId === bookId);
-          if (bookIndex !== -1 && books[bookIndex].status === 'Available') {
-            books[bookIndex].status = 'Not Available';
-            books[bookIndex].issuerCardId = issuerCardId;
-            books[bookIndex].issueDate = issueDate;
-            books[bookIndex].dueDate = dueDate;
+        <script>
+            function startLibrary() {
+            document.getElementById('frontPage').style.display = 'none';
+            document.getElementById('libraryPage').style.display = 'block';
+            }
+            function getBooks() {
+            const books = localStorage.getItem('books');
+            return books ? JSON.parse(books) : [];
+            }
+            function saveBooks(books) {
+            localStorage.setItem('books', JSON.stringify(books));
+            }
+            function calculateFine(issueDate, dueDate) {
+            if (!dueDate || !issueDate) return 0;
+            const today = new Date();
+            const due = new Date(dueDate);
+            const issue = new Date(issueDate);
+            const diffTime = today - due;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            return diffDays > 0 ? diffDays : 0;
+            }
+            function updateAvailableBooksCount() {
+            const books = getBooks();
+            const availableBooks = books.filter(book => book.status === 'Available').length;
+            const availableBooksCount = document.getElementById('availableBooksCount');
+            availableBooksCount.textContent = `Books Available: ${availableBooks}`;
+            }
+            function displayBooks() {
+            const books = getBooks();
+            const bookList = document.querySelector('#bookList tbody');
+            bookList.innerHTML = ''; // Clear the table before updating
+            books.forEach((book, index) => {
+                const fine = calculateFine(book.issueDate, book.dueDate);
+                const fineDisplay = fine > 0 ? `$${fine}` : 'No Fine';
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                <td>${book.bookName}</td>
+                <td>${book.author}</td>
+                <td>${book.bookId}</td>
+                <td>${book.status}</td>
+                <td>${book.issueDate || 'N/A'}</td>
+                <td>${book.dueDate || 'N/A'}</td>
+                <td class="fine">${fineDisplay}</td>
+                <td class="action-buttons">
+                    <button onclick="editBook(${index})">Edit</button>
+                    <button onclick="deleteBook(${index})">Delete</button>
+                    ${book.status === 'Not Available' ? `<button onclick="returnBook(${index})">Return</button>` : ''}
+                </td>
+                `;
+                bookList.appendChild(row);
+            });
+            }
+            function addBook(event) {
+            event.preventDefault();
+            const bookName = document.getElementById('bookName').value;
+            const author = document.getElementById('bookAuthor').value;
+            const bookId = document.getElementById('bookId').value;
+            const status = document.getElementById('status').value;
+            const books = getBooks();
+            books.push({ bookName, author, bookId, status });
             saveBooks(books);
             displayBooks();
             updateAvailableBooksCount();
-          }
-          document.getElementById('issueForm').reset();
-        }
-        function deleteBook(index) {
-          const books = getBooks();
-          books.splice(index, 1);
-          saveBooks(books);
-          displayBooks();
-          updateAvailableBooksCount();
-        }
-        function editBook(index) {
-          const books = getBooks();
-          const book = books[index];
-          document.getElementById('bookName').value = book.bookName;
-          document.getElementById('bookAuthor').value = book.author;
-          document.getElementById('bookId').value = book.bookId;
-          document.getElementById('status').value = book.status;
-          deleteBook(index);
-        }
-        document.getElementById('bookForm').addEventListener('submit', addBook);
-        document.getElementById('issueForm').addEventListener('submit', issueBook);
-        displayBooks();
-        updateAvailableBooksCount();
-      </script>
+            document.getElementById('bookForm').reset();
+            }
+            function issueBook(event) {
+            event.preventDefault();
+            const bookId = document.getElementById('issueBookId').value;
+            const issuerCardId = document.getElementById('issueIssuerCardId').value;
+            const issueDate = document.getElementById('issueDate').value;
+            const dueDate = document.getElementById('dueDate').value;
+            const books = getBooks();
+            const bookIndex = books.findIndex(book => book.bookId === bookId);
+            if (bookIndex !== -1 && books[bookIndex].status === 'Available') {
+                books[bookIndex].status = 'Not Available';
+                books[bookIndex].issuerCardId = issuerCardId;
+                books[bookIndex].issueDate = issueDate;
+                books[bookIndex].dueDate = dueDate;
+                saveBooks(books);
+                displayBooks();
+                updateAvailableBooksCount();
+            }
+            document.getElementById('issueForm').reset();
+            }
+            function returnBook(index) {
+                const books = getBooks();
+                const book = books[index];
+                if (book.status === 'Not Available') {
+                    book.status = 'Available';
+                    book.issueDate = null;
+                    book.dueDate = null;
+                    book.issuerCardId = null; 
+                    saveBooks(books);
+                    displayBooks();
+                    updateAvailableBooksCount();
+                } else {
+                    alert("This book is not currently issued.");
+                }
+            }
+            function deleteBook(index) {
+            const books = getBooks();
+            books.splice(index, 1);
+            saveBooks(books);
+            displayBooks();
+            updateAvailableBooksCount();
+            }
+            function editBook(index) {
+            const books = getBooks();
+            const book = books[index];
+            document.getElementById('bookName').value = book.bookName;
+            document.getElementById('bookAuthor').value = book.author;
+            document.getElementById('bookId').value = book.bookId;
+            document.getElementById('status').value = book.status;
+            deleteBook(index);
+            }
+            document.getElementById('bookForm').addEventListener('submit', addBook);
+            document.getElementById('issueForm').addEventListener('submit', issueBook);
+            displayBooks();
+            updateAvailableBooksCount();
+        </script>
 </body>
 </html>
